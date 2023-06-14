@@ -32,21 +32,26 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent">
         <RadioButton
+            android:id="@+id/radioButtonTea"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_margin="8dp"
+            android:checked="true"
+            android:onClick="onClickChangeDrink"
             android:textColor="@color/white"
             android:text="@string/tea"/>
         <RadioButton
+            android:id="@+id/radioButtonCoffee"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_margin="8dp"
+            android:onClick="onClickChangeDrink"
             android:textColor="@color/white"
             android:text="@string/coffee"/>
     </RadioGroup>
 
     <TextView
-        android:id="@+id/textViewEditions"
+        android:id="@+id/textViewAdditions"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/additions"
@@ -65,7 +70,7 @@
         android:textColor="@color/white"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:layout_constraintTop_toBottomOf="@id/textViewEditions"
+        app:layout_constraintTop_toBottomOf="@id/textViewAdditions"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toStartOf="@id/checkBoxSugar"
         />
@@ -76,7 +81,7 @@
         android:textColor="@color/white"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:layout_constraintTop_toBottomOf="@id/textViewEditions"
+        app:layout_constraintTop_toBottomOf="@id/textViewAdditions"
         app:layout_constraintStart_toEndOf="@id/checkBoxMilk"
         app:layout_constraintEnd_toStartOf="@id/checkBoxLemon"/>
     <CheckBox
@@ -86,7 +91,7 @@
         android:textColor="@color/white"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:layout_constraintTop_toBottomOf="@id/textViewEditions"
+        app:layout_constraintTop_toBottomOf="@id/textViewAdditions"
         app:layout_constraintStart_toEndOf="@id/checkBoxSugar"
         app:layout_constraintEnd_toEndOf="parent"/>
 
@@ -128,10 +133,11 @@
         app:layout_constraintEnd_toEndOf="parent"/>
 
     <ImageView
-        android:id="@+id/bittonSendOrder"
+        android:id="@+id/buttonSendOrder"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:layout_margin="8dp"
+        android:onClick="onClickSendOrder"
         android:contentDescription="@string/button_send_description"
         android:src="@drawable/button"
         app:layout_constraintTop_toBottomOf="@id/spinnerCoffee"
